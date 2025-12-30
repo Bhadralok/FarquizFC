@@ -19,7 +19,7 @@ export default async function RootLayout({
   const session = await getSession();
 
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning={true}>
       <body style={{ backgroundColor: "white" }}>
         <Providers session={session}>
           <ClientReady />
